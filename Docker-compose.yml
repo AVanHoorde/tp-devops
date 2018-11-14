@@ -1,0 +1,31 @@
+
+
+version: "3.1"
+
+services:
+
+  database:
+    image: "postgres:latest"
+    restart: "unless-stopped"
+    environment:
+      POSTGRES_DB: "tpwsf"
+      POSTGRES_USER: "louis"
+      POSTGRES_PASSWORD: "qwerty"
+    volumes:
+      - "tp:/var/lib/postgresql/data"
+    ports:
+      - "5432:5432"
+
+  cache:  
+    image: "postgres:latest"
+    restart: "unless-stopped"
+    environment:
+      POSTGRES_DB: "tpwsf"
+      POSTGRES_USER: "louis"
+      POSTGRES_PASSWORD: "qwerty"
+    volumes:
+      - "tp:/var/lib/postgresql/data"
+    ports:
+      - "5432:5432"
+volumes:
+  tp:
