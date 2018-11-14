@@ -1,32 +1,35 @@
-
-
 version: "3.1"
 
-services:
-
+services: 
   database:
     image: "postgres:latest"
     restart: "unless-stopped"
-    environment:
-      POSTGRES_DB: "tpwsf"
-      POSTGRES_USER: "louis"
-      POSTGRES_PASSWORD: "qwerty"
+    environment: 
+      POSTGRES_DB: "courswsf"
+      POSTGRES_USER: "loic"
+      POSTGRES_PASSWORD: "azerty"
     volumes:
-      - "tp:/var/lib/postgresql/data"
-    ports:
+      - "cours:/var/lib/postgresql/data"
+    ports: 
       - "5432:5432"
 
-  cache:  
-    image: "redis:latest"
-    restart: "unless-stopped"
+volumes:
+  cours:
+
+
+version: '2'
+
+services:
+  redis:
+    image: 'redis:latest'
     environment:
-      POSTGRES_DB: "tpwsf"
-      POSTGRES_USER: "louis"
-      POSTGRES_PASSWORD: "qwerty"
-    volumes:
-      - "tp:/var/lib/redis/data"
+      - ALLOW_EMPTY_PASSWORD=yes
     ports:
-      - "6379:6379"
+      - '6379:6379'
+    volumes:
+      - "redis-persistence:/bitnami/redis/data"
 
 volumes:
-  tp:
+redis-persistence:
+
+# docker-compose up
