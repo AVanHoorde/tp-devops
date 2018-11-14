@@ -17,15 +17,15 @@ services:
       - "5432:5432"
 
   cache:  
-    image: "postgres:latest"
+    image: "redis:latest"
     restart: "unless-stopped"
     environment:
       POSTGRES_DB: "tpwsf"
       POSTGRES_USER: "louis"
       POSTGRES_PASSWORD: "qwerty"
     volumes:
-      - "tp:/var/lib/postgresql/data"
+      - "tp:/var/lib/redis/data"
     ports:
-      - "5432:5432"
+      - "6380:6379"
 volumes:
   tp:
