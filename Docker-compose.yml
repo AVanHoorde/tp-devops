@@ -6,7 +6,7 @@ services:
     restart: "unless-stopped"
     environment: 
       POSTGRES_DB: "courswsf"
-      POSTGRES_USER: "loic"
+      POSTGRES_USER: "louis"
       POSTGRES_PASSWORD: "azerty"
     volumes:
       - "cours:/var/lib/postgresql/data"
