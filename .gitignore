@@ -74,3 +74,17 @@ $RECYCLE.BIN/
 *.lnk
 
 # End of https://www.gitignore.io/api/go,macos,windows
+
+# Ignore terraform variables
+
+### Terraform ###
+# Local .terraform directories
+*/.terraform/
+
+# .tfstate files
+*.tfstate
+.tfstate.
+
+# .tfstate files
+*.tfvars
+.tfvars.
