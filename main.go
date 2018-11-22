@@ -4,7 +4,7 @@ import (
 	"log"
 	"net/http"
 
-	"wsf/devops/handler"
+	"./handler"
 )
 
 func main() {
