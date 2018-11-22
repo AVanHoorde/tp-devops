@@ -77,10 +77,6 @@ $RECYCLE.BIN/
 
 # Ignore terraform variables
 
-### Terraform ###
-# Local .terraform directories
-*/.terraform/
-
 # .tfstate files
 *.tfstate
 .tfstate.
