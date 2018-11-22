@@ -8,11 +8,3 @@ provider "heroku" {
   api_key = "${var.heroku_api_key}"
 }
 
-# Create a new application
-resource "heroku_app" "staging" {
-
-}
-
-resource "heroku_app" "prod" {
-
-}
