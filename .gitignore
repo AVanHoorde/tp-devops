@@ -77,5 +77,7 @@ $RECYCLE.BIN/
 
 # Ignore Terraform variables
 
-*.tfvars
-.tfvars.
+**/*.terraform/*
+**/*.tfvars
+**/*.tfstate
+**/*.tfstate*
