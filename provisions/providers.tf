@@ -9,6 +9,10 @@ provider "heroku" {
 }
 
 # Create a new application
-resource "heroku_app" "default" {
+resource "heroku_app" "staging" {
+
+}
+
+resource "heroku_app" "prod" {
 
 }
